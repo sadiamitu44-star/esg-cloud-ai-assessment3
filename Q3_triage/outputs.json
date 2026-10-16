@@ -1,0 +1,68 @@
+[
+  {
+    "message": "There is a water leak in Building C that has been running all morning.",
+    "run": 1,
+    "model": "gemini-3.8-flash (Google AI Studio)",
+    "output": {
+      "issue_category": "WATER_LEAK",
+      "urgency": "HIGH",
+      "sentiment": "NEGATIVE",
+      "followup_required": true,
+      "recommended_team": "FACILITIES",
+      "escalation_reason": "Ongoing water leak poses risk of property damage and resource waste.",
+      "data_sensitivity_risk": "NONE",
+      "brief_summary": "Active water leak reported in Building C running continuously all morning.",
+      "confidence": 0.98
+    }
+  },
+  {
+    "message": "There is a water leak in Building C that has been running all morning.",
+    "run": 2,
+    "model": "gemini-3.8-flash (Google AI Studio)",
+    "note": "Added details not in the message (broken pipe, flooding, structural damage).",
+    "output": {
+      "issue_category": "WATER_LEAK",
+      "urgency": "HIGH",
+      "sentiment": "NEGATIVE",
+      "followup_required": true,
+      "recommended_team": "FACILITIES",
+      "escalation_reason": "Broken pipe causing active flooding and ongoing structural or property damage.",
+      "data_sensitivity_risk": "NONE",
+      "brief_summary": "Broken pipe near Building C with active flooding requiring urgent repair.",
+      "confidence": 0.98
+    }
+  },
+  {
+    "message": "I want to report that one of our suppliers may not meet our sustainability policy.",
+    "run": 1,
+    "model": "gemini-3.8-flash (Google AI Studio)",
+    "note": "issue_category PROCUREMENT_COMPLIANCE is not in the allowed list (PROCUREMENT_SUPPLIER).",
+    "output": {
+      "issue_category": "PROCUREMENT_COMPLIANCE",
+      "urgency": "MEDIUM",
+      "sentiment": "NEUTRAL",
+      "followup_required": true,
+      "recommended_team": "PROCUREMENT",
+      "escalation_reason": null,
+      "data_sensitivity_risk": "NONE",
+      "brief_summary": "Report indicating a supplier may not comply with the company sustainability policy.",
+      "confidence": 0.95
+    }
+  },
+  {
+    "message": "The accessible entrance near the main building has been blocked for two days.",
+    "run": 1,
+    "model": "gemini-3.8-flash (Google AI Studio)",
+    "output": {
+      "issue_category": "ACCESSIBILITY",
+      "urgency": "HIGH",
+      "sentiment": "NEGATIVE",
+      "followup_required": true,
+      "recommended_team": "ACCESSIBILITY_SERVICES",
+      "escalation_reason": "Ongoing physical access barrier blocking the main accessible entrance for two days.",
+      "data_sensitivity_risk": "NONE",
+      "brief_summary": "Main building accessible entrance has been blocked for two days.",
+      "confidence": 0.98
+    }
+  }
+]
