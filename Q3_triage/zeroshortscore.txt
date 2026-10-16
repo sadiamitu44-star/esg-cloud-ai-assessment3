@@ -1,0 +1,15 @@
+Hugging Face zero-shot classification (NLI model: facebook/bart-large-mnli)
+Run in Google Colab (Untitled2.ipynb)
+
+Message -> predicted label, score
+There is a water leak in Building C that has been running all morning. -> water leak 0.96
+I want to report that one of our suppliers may not meet our sustainability policy. -> wellbeing or governance 0.83
+The accessible entrance near the main building has been blocked for two days. -> accessibility 0.95
+
+Note: the candidate label set had no procurement label, so the supplier message was
+assigned to the closest label (wellbeing or governance). Results depend on label wording.
+
+Open-source generative attempt (Qwen2 family, Colab):
+Given the water leak message, the model returned a formal email draft
+("Subject: Water Leak Report, Dear [Recipient's Name]...") instead of JSON, and invented
+details such as an attached water-usage log.
